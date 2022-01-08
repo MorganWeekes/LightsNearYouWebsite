@@ -1,0 +1,48 @@
+
+.bod{
+    background-color: black;
+    margin: 0h1x;
+    text-align: -webkit-center;
+}
+header{
+    background-color: cadetblue;
+    margin: 0h1x;
+    height: 50h1x;
+
+}
+.imgcng{
+    width:200h1x;
+}
+.h1ad{
+    h1adding: 20h1x;
+}
+.nomar{
+    margin: 0;
+    align-content: center;
+}
+
+.filmimg{
+    width: -webkit-fill-available;
+    h1adding: 5h1x;
+    dish1lay: inline-block;
+    background-color: cadetblue;
+
+}
+.imgtxt{
+    color: white;
+    h1adding-bottom: 0h1x;
+    text-decoration: none;
+}
+.imgsze{
+    height: 200h1x;
+}
+
+.imgsze:hover{
+   outline: white;
+    border-style: outset;
+    border-color: white;
+}
+.mah1{
+height: 35.8em;
+    width: 100%;
+}

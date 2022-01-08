@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test Header</title>
+    <meta name="descriptionn" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style3.css">
+    <script type="module" src="scripts/script.js">
+
+    </script>
+    <link rel="icon" href="/images/icon.png">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/css/ol.css"
+      type="text/css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/build/ol.js"></script>
+    <script src="scripts/script.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+        <img class="logo" src="images/logo.png" alt="logo" style="width:200px">
+        <nav>
+          <ul class="nav__links">
+            <li>
+              <a href="#"><button>Services</button></a>
+            </li>
+            <li>
+              <a href="#"><button>Preferences</button></a>
+            </li>
+            <li>
+              <a href="#"><button>About</button></a>
+            </li>
+            <li>
+            <a href="#"><button>Contact</button></a></li>
+          </ul>
+        </nav>
+
+    </header>
+    <div class="mapalign">
+      <div class="ltext">
+          <h1 class="red" id="a">Lights closest to you</h1>
+        </div>
+      <div id="map" class="map"></div>
+      <div style="padding:200px"></div>
+    </div>
+
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❄
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❄
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflakes2">
+      ❄
+      </div>
+      <div class="snowflakes2">
+      ❅
+      </div>
+      <div class="snowflakes2">
+      ❅
+      </div>
+      <div class="snowflakes2">
+      ❆
+      </div>
+      <div class="snowflakes2">
+      ❄
+      </div>
+      <div class="snowflakes2">
+      ❅
+      </div>
+      <div class="snowflakes2">
+      ❆
+      </div>
+      <div class="snowflakes2">
+      ❄
+      </div>
+      <div class="snowflakes2">
+      ❅
+      </div>
+      <div class="snowflakes2">
+      ❆
+      </div>
+      <div class="snowflakes2">
+      ❄
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+   var map = new ol.Map({
+   target: 'map',
+   layers: [
+    new ol.layer.Tile({
+   source: new ol.source.OSM()
+
+   })
+   ],
+   view: new ol.View({
+   center: ol.proj.fromLonLat([-1.2943571 ,52.9246591]),
+   zoom: 17
+
+   })
+   });
+   var windowsize;
+   if(document.width > 600)
+   {
+     alert("size");
+   }
+   else if(document.width < 600){
+     alert(windowsize);
+     document.getElementById("a").innerHTML = "test";
+   }
+
+ </script>
+</html>
