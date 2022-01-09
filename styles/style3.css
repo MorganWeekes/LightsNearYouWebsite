@@ -72,7 +72,6 @@ h1{
   display: flex;
   border-radius: 20px;
   border:inset;
-
   border-width: 10px;
   border-style: block;
   border-color: #grey;
@@ -95,6 +94,7 @@ li,a,button{
 header{
 position: sticky;
 top:0;
+  z-index: 4;
   background: repeating-linear-gradient(
   -45deg,
   rgba(255, 255, 255, 0.7),
