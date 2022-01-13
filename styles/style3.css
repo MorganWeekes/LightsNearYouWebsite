@@ -81,6 +81,18 @@ h1{
   border-color: #grey;
 
 }
+.mapm{
+  height: 40vh;
+  width: 70%;
+  align-items:center;
+  display: flex;
+  border-radius: 20px;
+  border:inset;
+  border-width: 10px;
+  border-style: block;
+  border-color: #grey;
+
+}
 .mapalign{
 padding-top: 5%;
   text-align: -webkit-center;
