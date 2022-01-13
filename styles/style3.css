@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
 *{
-  box-sizing: border-box;
+ box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 
@@ -246,7 +246,6 @@ top:0;
  }
  .buttonmenum{
    padding: 10px 20px;
-   background-color: white;
    border: black;
    border-style: solid;
    border-radius: 50px;
@@ -259,5 +258,8 @@ top:0;
  .buttonmenum:hover{
    background-color: rgba(255, 100, 100, 0.9);
    color: black;
-   text-decoration-color: black;
+ }
+ .footer{
+   background-color: rgba(0, 0, 0, 0.5);
+
  }
