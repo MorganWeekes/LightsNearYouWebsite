@@ -166,6 +166,46 @@
   <script>
     var DoUpdate;
     console.log( "document loaded" );
+    $( window ).resize(function() {
+
+      if($(window).width() > 800){
+        document.getElementById("mobile").style.visibility = "hidden";
+        document.getElementById("web").style.visibility = "visible";
+        document.getElementById("mobile").style.display = "none";
+        document.getElementById("web").style.display = "block";
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+              new ol.layer.Tile({
+                source: new ol.source.OSM()
+              })
+            ],
+            view: new ol.View({
+              center: ol.proj.fromLonLat([-1.2943571, 52.9246591]),
+              zoom: 17
+            })
+          });
+      }
+      else if($(window).width() < 800){
+          document.getElementById("mobile").style.visibility = "visible";
+          document.getElementById("web").style.visibility = "hidden";
+          document.getElementById("mobile").style.display = "block";
+          document.getElementById("web").style.display = "none";
+          var map = new ol.Map({
+              target: 'mapm',
+              layers: [
+                new ol.layer.Tile({
+                  source: new ol.source.OSM()
+                })
+              ],
+              view: new ol.View({
+                center: ol.proj.fromLonLat([-1.2943571, 52.9246591]),
+                zoom: 17
+              })
+            });
+      }
+    });
+
     $( document ).ready(function() {
 
     if($(window).width() > 800){
