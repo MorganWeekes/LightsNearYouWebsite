@@ -12,7 +12,12 @@ body {
 
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
-
+.mobile{
+  visibility: hidden;
+}
+.web{
+  visibility: hidden;
+}
 .snowflake {
   color: #fff;
   font-size: 1em;
@@ -41,9 +46,7 @@ body {
 color: #000;
 }
 
-.mobile{
-  content: "test"
-}
+
 .red{
   display: inline-block;
   text-align: justify;
