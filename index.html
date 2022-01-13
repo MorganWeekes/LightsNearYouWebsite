@@ -173,6 +173,7 @@
         document.getElementById("web").style.visibility = "visible";
         document.getElementById("mobile").style.display = "none";
         document.getElementById("web").style.display = "block";
+        if(document.getElementById("map").innerHTML == ""){
         var map = new ol.Map({
             target: 'map',
             layers: [
@@ -186,11 +187,13 @@
             })
           });
       }
+    }
       else if($(window).width() < 800){
           document.getElementById("mobile").style.visibility = "visible";
           document.getElementById("web").style.visibility = "hidden";
           document.getElementById("mobile").style.display = "block";
           document.getElementById("web").style.display = "none";
+          if(document.getElementById("mapm").innerHTML == ""){
           var map = new ol.Map({
               target: 'mapm',
               layers: [
@@ -203,6 +206,7 @@
                 zoom: 17
               })
             });
+          }
       }
     });
 
