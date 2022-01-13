@@ -60,6 +60,20 @@ color: #000;
   background-color:transparent;
 
 }
+
+.redm{
+  display: inline-block;
+  text-align: justify;
+  padding: 10px;
+  background-color: transparent;
+  background: transparent;
+  font-weight: bold;
+  font-size: 50px;
+
+  color:white;
+  background-color:transparent;
+
+}
 .green{
   color: #028a0f;
   display: inline-block;
@@ -98,7 +112,15 @@ padding-top: 5%;
   text-align: -webkit-center;
 }
 
-li,a,button{
+li,a,.buttonmenu{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500 bold;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding-left: 5px;
+}
+li,a,.buttonmenum{
   font-family: "Montserrat", sans-serif;
   font-weight: 500 bold;
   font-size: 16px;
@@ -130,6 +152,12 @@ top:0;
 .logo{
   margin-right: auto;
   cursor: pointer;
+  width:200px;
+}
+.logom{
+  margin-right: auto;
+  cursor: pointer;
+  width:150px;
 }
 .dropdown {
   position: relative;
@@ -166,7 +194,8 @@ top:0;
    color: rgba(255, 100, 100, 1);
 
  }
- button{
+ .buttonmenu
+ {
    padding: 10px 25px;
    background-color: white;
    border: black;
@@ -178,7 +207,25 @@ top:0;
    color: rgba(200, 50, 50, 1);
    font-weight: bold;
  }
- button:hover{
+ .buttonmenu:hover{
+   background-color: rgba(255, 100, 100, 0.5);
+   color: black;
+   text-decoration-color: black;
+ }
+
+ .buttonmenum{
+   padding: 10px 20px;
+   background-color: white;
+   border: black;
+   border-style: solid;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+   background-color: rgba(255,255,255,0.7);
+   color: rgba(200, 50, 50, 1);
+   font-weight: bold;
+ }
+ .buttonmenum:hover{
    background-color: rgba(255, 100, 100, 0.5);
    color: black;
    text-decoration-color: black;
