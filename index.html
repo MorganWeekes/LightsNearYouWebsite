@@ -12,10 +12,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/css/ol.css" type="text/css" />
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/build/ol.js"></script>
   </head>
+
   <body id="body">
+
     <div class="web" id="web">
       <header>
+
         <img class="logo" src="images/logo.png" alt="logo">
+
         <nav>
           <ul class="nav__links">
             <li>
@@ -51,8 +55,15 @@
               </a>
             </li>
           </ul>
+
         </nav>
+
+        <div>
+          <button onclick="$().test('msg');" class=buttontoggleoff >❅</button>
+        </div>
       </header>
+
+
       <div class="mapalign">
         <div class="ltext">
           <h1 class="red" id="a">Lights closest to you</h1>
@@ -62,7 +73,7 @@
         </div>
         <div style="padding:12%"></div>
       </div>
-      <div id="web" class="snowflakes" aria-hidden="true">
+      <div id="snowflakes" class="snowflakes" aria-hidden="true">
         <div class="snowflake"> ❅ </div>
         <div class="snowflake"> ❅ </div>
         <div class="snowflake"> ❅ </div>
@@ -106,6 +117,9 @@
               </div>
             </div>
           </div>
+          <div>
+            <button onclick="$().SnowflakesMobile('msg');" class=buttontoggleoff >❅</button>
+          </div>
         </header>
         <div class="mapalign">
           <h1 class="redm" id="a">Lights closest to you</h1>
@@ -114,7 +128,7 @@
           </div>
           <div style="padding:12%"></div>
         </div>
-        <div id="web" class="snowflakes" aria-hidden="true">
+        <div id="snowflakesmobile" class="snowflakes" aria-hidden="true">
           <div class="snowflake"> ❅ </div>
           <div class="snowflake"> ❅ </div>
           <div class="snowflake"> ❅ </div>
@@ -131,21 +145,63 @@
     </div>
   </body>
   <footer class="footer">
-    <a href="#">
-      <img src="images/FacebookIcos/Color/PNG/f_logo_RGB-Blue_100.png" class="footerimgdiv">
-    </a>
-    <a href="#">
-      <img src="images/InstagramIcos/Instagram_Glyph_Gradient_RGB_Inverted.png" class="footerimgdiv">
-    </a>
-    <a href="#">
-      <img src="images/Twitter social icons/TwitterIcosRound/Twitter social icons - circle - blue.png" class="footerimgdiv">
-    </a>
-    <div>
-      <h3>Lights near you ©</h3>
+    <div class="icons">
+      <a href="#">
+        <img src="images/FacebookIcos/Color/PNG/f_logo_RGB-Blue_100.png" class="footerimgdiv">
+      </a>
+      <a href="#">
+        <img src="images/InstagramIcos/Instagram_Glyph_Gradient_RGB_Inverted.png" class="footerimgdiv">
+      </a>
+      <a href="#">
+        <img src="images/Twitter social icons/TwitterIcosRound/Twitter social icons - circle - blue.png" class="footerimgdiv">
+      </a>
+      <div>
+        <h3>Lights near you ©</h3>
+      </div>
     </div>
+    <!-- Rectangular switch -->
+
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+</script>
+
+
   <script>
+  var snowflakes = true;
+    $.fn.test = function(){
+        if(snowflakes == true){
+          console.log("snowflakesOff");
+              document.getElementById("snowflakes").style.visibility = "hidden";
+              document.getElementById("snowflakes").style.display = "none";
+              snowflakes = !snowflakes;
+            }
+            else if(snowflakes != true){
+              console.log("snowflakesOn");
+        document.getElementById("snowflakes").style.visibility = "visible";
+        document.getElementById("snowflakes").style.display = "block";
+  snowflakes = !snowflakes;
+      }
+
+    };
+    var snowflakesMobilevar = true;
+      $.fn.SnowflakesMobile = function(){
+          if(snowflakesMobilevar == true){
+            console.log("snowflakesOff");
+                document.getElementById("snowflakesmobile").style.visibility = "hidden";
+                document.getElementById("snowflakesmobile").style.display = "none";
+                snowflakesMobilevar = !snowflakesMobilevar;
+              }
+              else if(snowflakesMobilevar != true){
+                console.log("snowflakesOn");
+          document.getElementById("snowflakesmobile").style.visibility = "visible";
+          document.getElementById("snowflakesmobile").style.display = "block";
+    snowflakesMobilevar = !snowflakesMobilevar;
+        }
+
+      };
+
     var DoUpdate;
     console.log("document loaded");
     $(window).resize(function() {
