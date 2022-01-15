@@ -327,8 +327,14 @@ top:0;
 .store-icons{
   align-items: center;
   text-align: center;
+  width: inherit;
+}
+.storeimg{
+  width: 20%;
+ height: auto;
 }
 .storeimages{
+  width: inherit;
   display: -webkit-inline-box;
   padding: 1%;
 }
