@@ -68,7 +68,7 @@
         <div class="ltext">
           <h1 class="red" id="a">Lights closest to you</h1>
         </div>
-        <div class"outerpan">
+        <div id="maploc"class"outerpan">
           <div id="map" class="map"></div>
         </div>
         <div style="padding:3%"></div>
@@ -133,12 +133,12 @@
         </header>
         <div class="mapalign">
           <h1 class="redm" id="a">Lights closest to you</h1>
-          <div class"outerpan">
+          <div id="maplocm"class"outerpan">
             <div id="mapm" class="mapm"></div>
           </div>
           <div style="padding:2%"></div>
         </div>
-        
+
         <div style="padding:5%"></div>
         <div id="snowflakesmobile" class="snowflakesm" aria-hidden="true">
           <div class="snowflake"> ❅ </div>
@@ -259,24 +259,96 @@
       }
     });
     $(document).ready(function() {
-      if ($(window).width() > 855) {
-        document.getElementById("mobile").style.visibility = "hidden";
-        document.getElementById("web").style.visibility = "visible";
-        document.getElementById("mobile").style.display = "none";
-        document.getElementById("web").style.display = "block";
-        var map = new ol.Map({
-          target: 'map',
-          layers: [
-            new ol.layer.Tile({
-              source: new ol.source.OSM()
+
+      var pos;
+        if (navigator.geolocation) {
+          pos = navigator.geolocation.getCurrentPosition(getloc);
+
+        }
+        function getloc(position){
+
+          if ($(window).width() > 855) {
+            var map;
+            map = document.getElementById("map");
+            map.remove();
+
+
+            var newDiv = document.createElement('div');
+            newDiv.id = "map";
+            newDiv.className = 'map';
+            document.getElementById('maploc').appendChild(newDiv);
+            pos = [position.coords.latitude +','+ position.coords.longitude];
+            document.getElementById("mobile").style.visibility = "hidden";
+            document.getElementById("web").style.visibility = "visible";
+            document.getElementById("mobile").style.display = "none";
+            document.getElementById("web").style.display = "block";
+            var map = new ol.Map({
+              target: 'map',
+              layers: [
+                new ol.layer.Tile({
+                  source: new ol.source.OSM()
+                })
+              ],
+              view: new ol.View({
+                center: ol.proj.fromLonLat([position.coords.longitude , position.coords.latitude]),
+                zoom: 15
+              })
+            });
+
+          }
+
+
+        else if ($(window).width() < 855) {
+          var mapm;
+          mapm = document.getElementById("mapm");
+          mapm.remove();
+
+
+          var newDiv = document.createElement('div');
+          newDiv.id = "mapm";
+          newDiv.className = 'mapm';
+          document.getElementById('maplocm').appendChild(newDiv);
+          document.getElementById("mobile").style.visibility = "visible";
+          document.getElementById("web").style.visibility = "hidden";
+          document.getElementById("mobile").style.display = "block";
+          document.getElementById("web").style.display = "none";
+          var map = new ol.Map({
+            target: 'mapm',
+            layers: [
+              new ol.layer.Tile({
+                source: new ol.source.OSM()
+              })
+            ],
+            view: new ol.View({
+              center: ol.proj.fromLonLat([position.coords.longitude , position.coords.latitude]),
+              zoom: 15
             })
-          ],
-          view: new ol.View({
-            center: ol.proj.fromLonLat([-1.2943571, 52.9246591]),
-            zoom: 17
-          })
-        });
-      } else if ($(window).width() < 855) {
+          });
+        }
+        }
+        if ($(window).width() > 855) {
+
+          document.getElementById("mobile").style.visibility = "hidden";
+          document.getElementById("web").style.visibility = "visible";
+          document.getElementById("mobile").style.display = "none";
+          document.getElementById("web").style.display = "block";
+          var map = new ol.Map({
+            target: 'map',
+            layers: [
+              new ol.layer.Tile({
+                source: new ol.source.OSM()
+              })
+            ],
+            view: new ol.View({
+              center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
+              zoom: 12
+            })
+          });
+
+        }
+
+
+      else if ($(window).width() < 855) {
         document.getElementById("mobile").style.visibility = "visible";
         document.getElementById("web").style.visibility = "hidden";
         document.getElementById("mobile").style.display = "block";
@@ -289,8 +361,8 @@
             })
           ],
           view: new ol.View({
-            center: ol.proj.fromLonLat([-1.2943571, 52.9246591]),
-            zoom: 15
+            center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
+            zoom: 13
           })
         });
       }
