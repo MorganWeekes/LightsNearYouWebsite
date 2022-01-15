@@ -319,3 +319,11 @@ top:0;
 .buttontoggleoff:hover{
   opacity: 100%;
 }
+.store-icons{
+  align-items: center;
+  text-align: center;
+}
+.storeimages{
+  display: -webkit-inline-box;
+  padding: 1%;
+}
