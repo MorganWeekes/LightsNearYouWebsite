@@ -18,8 +18,9 @@
     <div class="web" id="web">
       <header>
 
+        <a  class="logo" href="index.html">
         <img class="logo" src="images/logo.png" alt="logo">
-
+        </a>
         <nav>
           <ul class="nav__links">
             <li>
@@ -40,7 +41,7 @@
             </li>
             <li>
               <a class="dropdown" href="#">
-                <button onclick="window.location.href='about.html'" class="buttonmenu">About</button>
+                <button class="buttonmenu">About</button>
                 <div class="dropdown-content">
                   <p>Hello World!</p>
                 </div>
@@ -63,16 +64,17 @@
         </div>
       </header>
 
-
-      <div class="mapalign">
+      <div class="Headeralign">
         <div class="ltext">
-          <h1 class="red" id="a">Lights closest to you</h1>
-        </div>
-        <div id="maploc"class"outerpan">
-          <div id="map" class="map"></div>
-        </div>
-        <div style="padding:3%"></div>
+        <h1 class="red">About Us</h1>
       </div>
+      <div class="textborder">
+        <p class="AboutText">Lights Near you © is a start up family run business made to help local families enjoy the christmas celebration and look at the decorations and lights near and closest to them</p>
+      </div>
+
+    </div>
+
+
       <div class="store-icons">
         <h1 style="color:white;">Get the app now on selected Mobile Stores</h1>
         <div style="padding:5px"></div>
@@ -109,7 +111,9 @@
     <div class="mobile" id="mobile">
       <div im>
         <header>
+          <a  class="logom" href="index.html">
           <img class="logom" src="images/logo.png" alt="logo">
+          </a>
           <div class="dropdownm">
             <img src="images/menum.png" class="menum">
             <div class="dropdown-contentm">
@@ -120,7 +124,7 @@
                 <a class="buttonmenum">Preferences</a>
               </div>
               <div class="buttonholderm">
-                <a class="buttonmenum" href="about.html">About</a>
+                <a class="buttonmenum">About</a>
               </div>
               <div class="buttonholderm">
                 <a class="buttonmenum">Contact</a>
@@ -131,14 +135,14 @@
             <button onclick="$().SnowflakesMobile('msg');" class=buttontoggleMob >❅</button>
           </div>
         </header>
-        <div class="mapalign">
-          <h1 class="redm" id="a">Lights closest to you</h1>
-          <div id="maplocm"class"outerpan">
-            <div id="mapm" class="mapm"></div>
-          </div>
-          <div style="padding:2%"></div>
+        <div class="Headeralign">
+          <div class="ltext">
+          <h1 class="red">About Us</h1>
         </div>
-
+        <div class="textborder">
+          <p class="AboutText">Lights Near you © is a start up family run business made to help local families enjoy the christmas celebration and look at the decorations and lights near and closest to them</p>
+        </div>
+      </div>
         <div style="padding:5%"></div>
         <div id="snowflakesmobile" class="snowflakesm" aria-hidden="true">
           <div class="snowflake"> ❅ </div>
@@ -215,136 +219,31 @@
 
       };
 
-    var DoUpdate;
-    console.log("document loaded");
     $(window).resize(function() {
       if ($(window).width() > 855) {
         document.getElementById("mobile").style.visibility = "hidden";
         document.getElementById("web").style.visibility = "visible";
         document.getElementById("mobile").style.display = "none";
         document.getElementById("web").style.display = "block";
-        if (document.getElementById("map").innerHTML == "") {
-          var map = new ol.Map({
-            target: 'map',
-            layers: [
-              new ol.layer.Tile({
-                source: new ol.source.OSM()
-              })
-            ],
-            view: new ol.View({
-              center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
-              zoom: 17
-            })
-          });
-        }
-      } else if ($(window).width() < 855) {
+
+      }
+       else if ($(window).width() < 855) {
         document.getElementById("mobile").style.visibility = "visible";
         document.getElementById("web").style.visibility = "hidden";
         document.getElementById("mobile").style.display = "block";
         document.getElementById("web").style.display = "none";
-        if (document.getElementById("mapm").innerHTML == "") {
-          var map = new ol.Map({
-            target: 'mapm',
-            layers: [
-              new ol.layer.Tile({
-                source: new ol.source.OSM()
-              })
-            ],
-            view: new ol.View({
-              center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
-              zoom: 17
-            })
-          });
-        }
+
       }
     });
+
     $(document).ready(function() {
 
-      var pos;
-        if (navigator.geolocation) {
-          pos = navigator.geolocation.getCurrentPosition(getloc);
-
-        }
-        function getloc(position){
-
-          if ($(window).width() > 855) {
-            var map;
-            map = document.getElementById("map");
-            map.remove();
-
-
-            var newDiv = document.createElement('div');
-            newDiv.id = "map";
-            newDiv.className = 'map';
-            document.getElementById('maploc').appendChild(newDiv);
-            pos = [position.coords.latitude +','+ position.coords.longitude];
-            document.getElementById("mobile").style.visibility = "hidden";
-            document.getElementById("web").style.visibility = "visible";
-            document.getElementById("mobile").style.display = "none";
-            document.getElementById("web").style.display = "block";
-            var map = new ol.Map({
-              target: 'map',
-              layers: [
-                new ol.layer.Tile({
-                  source: new ol.source.OSM()
-                })
-              ],
-              view: new ol.View({
-                center: ol.proj.fromLonLat([position.coords.longitude , position.coords.latitude]),
-                zoom: 17
-              })
-            });
-
-          }
-
-
-        else if ($(window).width() < 855) {
-          var mapm;
-          mapm = document.getElementById("mapm");
-          mapm.remove();
-
-
-          var newDiv = document.createElement('div');
-          newDiv.id = "mapm";
-          newDiv.className = 'mapm';
-          document.getElementById('maplocm').appendChild(newDiv);
-          document.getElementById("mobile").style.visibility = "visible";
-          document.getElementById("web").style.visibility = "hidden";
-          document.getElementById("mobile").style.display = "block";
-          document.getElementById("web").style.display = "none";
-          var map = new ol.Map({
-            target: 'mapm',
-            layers: [
-              new ol.layer.Tile({
-                source: new ol.source.OSM()
-              })
-            ],
-            view: new ol.View({
-              center: ol.proj.fromLonLat([position.coords.longitude , position.coords.latitude]),
-              zoom: 17
-            })
-          });
-        }
-        }
         if ($(window).width() > 855) {
 
           document.getElementById("mobile").style.visibility = "hidden";
           document.getElementById("web").style.visibility = "visible";
           document.getElementById("mobile").style.display = "none";
           document.getElementById("web").style.display = "block";
-          var map = new ol.Map({
-            target: 'map',
-            layers: [
-              new ol.layer.Tile({
-                source: new ol.source.OSM()
-              })
-            ],
-            view: new ol.View({
-              center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
-              zoom: 17
-            })
-          });
-
         }
 
 
@@ -353,18 +252,7 @@
         document.getElementById("web").style.visibility = "hidden";
         document.getElementById("mobile").style.display = "block";
         document.getElementById("web").style.display = "none";
-        var map = new ol.Map({
-          target: 'mapm',
-          layers: [
-            new ol.layer.Tile({
-              source: new ol.source.OSM()
-            })
-          ],
-          view: new ol.View({
-            center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
-            zoom: 17
-          })
-        });
+
       }
     });
   </script>
