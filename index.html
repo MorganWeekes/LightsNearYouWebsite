@@ -203,18 +203,23 @@
     var snowflakesMobilevar = false;
       $.fn.SnowflakesMobile = function(){
           if(snowflakesMobilevar == true){
+            document.getElementsByClassName("body")[0].focus();
             console.log("snowflakesOff");
+                document.getElementById("dropdown-contentm").style.display = "none";
                 document.getElementById("snowflakesmobile").style.visibility = "hidden";
                 document.getElementById("snowflakesmobile").style.display = "none";
                 snowflakesMobilevar = !snowflakesMobilevar;
-                document.getElementById("dropdown-contentm").style.display = "none";
+
               }
               else if(snowflakesMobilevar != true){
+                document.getElementsByClassName("body")[0].focus();
+                document.getElementById("dropdown-contentm").style.display = "none";
                 console.log("snowflakesOn");
-          document.getElementById("snowflakesmobile").style.visibility = "visible";
-          document.getElementById("snowflakesmobile").style.display = "block";
+                document.getElementById("snowflakesmobile").style.visibility = "visible";
+
+                document.getElementById("snowflakesmobile").style.display = "block";
     snowflakesMobilevar = !snowflakesMobilevar;
-    document.getElementById("dropdown-contentm").style.display = "none";
+
         }
 
       };
