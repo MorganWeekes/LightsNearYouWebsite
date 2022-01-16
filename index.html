@@ -207,14 +207,16 @@
                 document.getElementById("snowflakesmobile").style.visibility = "hidden";
                 document.getElementById("snowflakesmobile").style.display = "none";
                 snowflakesMobilevar = !snowflakesMobilevar;
+                document.getElementById("dropdown-contentm").style.display = "none";
               }
               else if(snowflakesMobilevar != true){
                 console.log("snowflakesOn");
           document.getElementById("snowflakesmobile").style.visibility = "visible";
           document.getElementById("snowflakesmobile").style.display = "block";
     snowflakesMobilevar = !snowflakesMobilevar;
+    document.getElementById("dropdown-contentm").style.display = "none";
         }
-        document.getElementById("dropdown-contentm").style.display = "none";
+
       };
 
     var DoUpdate;
