@@ -116,7 +116,7 @@
           </a>
           <div class="dropdownm">
             <img src="images/menum.png" class="menum">
-            <div class="dropdown-contentm">
+            <div class="responsive-menu">
               <div class="buttonholderm">
                 <a href="" class="buttonmenum">Services</a>
               </div>
@@ -124,16 +124,17 @@
                 <a class="buttonmenum">Preferences</a>
               </div>
               <div class="buttonholderm">
-                <a class="buttonmenum">About</a>
+                <a class="buttonmenum" href="about.html">About</a>
               </div>
               <div class="buttonholderm">
                 <a class="buttonmenum">Contact</a>
               </div>
               <div class="buttonholderm">
-                <a onclick="$().SnowflakesMobile('msg');" class=buttonmenum >❅</a>
+                <a href="javascript:$().SnowflakesMobile('msg');" class="buttonmenum" >❅</a >
               </div>
-            </div>
+            </button>
           </div>
+        
 
         </header>
         <div class="Headeralign">
@@ -187,7 +188,11 @@
 
   <script>
   var snowflakes = true;
-
+  jQuery(function($){
+   $( '.dropdownm' ).click(function(){
+   $('.responsive-menu').toggleClass('expand')
+   })
+})
     $.fn.test = function(){
         if(snowflakes == true){
           console.log("snowflakesOff");

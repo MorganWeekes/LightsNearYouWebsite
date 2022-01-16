@@ -111,9 +111,9 @@
       <div im>
         <header>
           <img class="logom" src="images/logo.png" alt="logo">
-          <div class="dropdownm">
+          <button id="dropdownm" class="dropdownm">
             <img src="images/menum.png" class="menum">
-            <div class="dropdown-contentm">
+            <div class="responsive-menu">
               <div class="buttonholderm">
                 <a href="" class="buttonmenum">Services</a>
               </div>
@@ -127,9 +127,9 @@
                 <a class="buttonmenum">Contact</a>
               </div>
               <div class="buttonholderm">
-                <a onclick="$().SnowflakesMobile('msg');" class="buttonmenum" >❅</a>
+                <a href="javascript:$().SnowflakesMobile('msg');" class="buttonmenum" >❅</a >
               </div>
-            </div>
+            </button>
           </div>
 
         </header>
@@ -177,12 +177,17 @@
 
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  <script type="text/javascript">
 
 </script>
 
 
   <script>
+  jQuery(function($){
+   $( '.dropdownm' ).click(function(){
+   $('.responsive-menu').toggleClass('expand')
+   })
+})
   var snowflakes = true;
 
     $.fn.test = function(){
@@ -200,20 +205,22 @@
       }
 
     };
+
+
     var snowflakesMobilevar = false;
       $.fn.SnowflakesMobile = function(){
           if(snowflakesMobilevar == true){
-            document.getElementsByClassName("body")[0].focus();
+            document.getElementById("body").focus();
             console.log("snowflakesOff");
-                document.getElementById("dropdown-contentm").style.display = "none";
+
                 document.getElementById("snowflakesmobile").style.visibility = "hidden";
                 document.getElementById("snowflakesmobile").style.display = "none";
                 snowflakesMobilevar = !snowflakesMobilevar;
 
               }
               else if(snowflakesMobilevar != true){
-                document.getElementsByClassName("body")[0].focus();
-                document.getElementById("dropdown-contentm").style.display = "none";
+                document.getElementById("body").focus();
+
                 console.log("snowflakesOn");
                 document.getElementById("snowflakesmobile").style.visibility = "visible";
 
