@@ -12,64 +12,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/css/ol.css" type="text/css" />
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/build/ol.js"></script>
   </head>
-
   <body id="body">
-
     <div class="web" id="web">
       <header>
-
         <img class="logo" src="images/logo.png" alt="logo">
-
         <nav>
           <ul class="nav__links">
             <li>
               <a class="dropdown" href="#">
                 <button class="buttonmenu">Services</button>
-                <div class="dropdown-content">
-                  <p>Hello World!</p>
-                </div>
               </a>
             </li>
             <li>
               <a class="dropdown" href="#">
-                <button class="buttonmenu">Preferences</button>
-                <div class="dropdown-content">
-                  <p>Hello World!</p>
-                </div>
+                <button class="buttonmenu">Download</button>
               </a>
             </li>
             <li>
               <a class="dropdown" href="#">
-                <button onclick="window.location.href='about.html'" class="buttonmenu">About</button>
-                <div class="dropdown-content">
-                  <p>Hello World!</p>
-                </div>
+                <button class="buttonmenu">About</button>
               </a>
             </li>
             <li>
               <a class="dropdown" href="#">
                 <button class="buttonmenu">Contact</button>
-                <div class="dropdown-content">
-                  <p>Hello World!</p>
-                </div>
               </a>
             </li>
-
           </ul>
-
         </nav>
-
-          <button  onclick="$().test('msg');" class="buttontoggleoff">❅</button>
-
-
+        <button onclick="$().test('msg');" class="buttontoggleoff">❅</button>
       </header>
-
-
       <div class="mapalign">
         <div class="ltext">
           <h1 class="red" id="a">Lights closest to you</h1>
         </div>
-        <div id="maploc"class"outerpan">
+        <div id="maploc" class"outerpan">
           <div id="map" class="map"></div>
         </div>
         <div style="padding:3%"></div>
@@ -127,27 +104,24 @@
                 <a class="buttonmenum">Contact</a>
               </div>
               <div class="buttonholderm">
-                <a href="javascript:$().SnowflakesMobile('msg');" class="buttonmenum" >❅</a >
+                <a href="javascript:$().SnowflakesMobile('msg');" class="buttonmenum">❅</a>
               </div>
-            </a>
-          </div>
-
+              </a>
+            </div>
         </header>
         <div class="mapalign">
           <h1 class="redm" id="a">Lights closest to you</h1>
-          <div id="maplocm"class"outerpan">
+          <div id="maplocm" class"outerpan">
             <div id="mapm" class="mapm"></div>
           </div>
           <div style="padding:2%"></div>
         </div>
-
         <div style="padding:5%"></div>
         <div id="snowflakesmobile" class="snowflakesm" aria-hidden="true">
           <div class="snowflake"> ❅ </div>
           <div class="snowflake"> ❅ </div>
           <div class="snowflake"> ❅ </div>
           <div class="snowflake"> ❅ </div>
-
           <div class="snowflakes2"> ❅ </div>
           <div class="snowflakes2"> ❅ </div>
           <div class="snowflakes2"> ❅ </div>
@@ -174,63 +148,45 @@
       </div>
     </div>
     <!-- Rectangular switch -->
-
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript">
-
-</script>
-
-
+  <script type="text/javascript"></script>
   <script>
-  jQuery(function($){
-   $( '.dropdownm' ).click(function(){
-   $('.responsive-menu').toggleClass('expand')
-   })
-})
-  var snowflakes = true;
-
-    $.fn.test = function(){
-        if(snowflakes == true){
-          console.log("snowflakesOff");
-              document.getElementById("snowflakes").style.visibility = "hidden";
-              document.getElementById("snowflakes").style.display = "none";
-              snowflakes = !snowflakes;
-            }
-            else if(snowflakes != true){
-              console.log("snowflakesOn");
+    jQuery(function($) {
+      $('.dropdownm').click(function() {
+        $('.responsive-menu').toggleClass('expand')
+      })
+    })
+    var snowflakes = true;
+    $.fn.test = function() {
+      if (snowflakes == true) {
+        console.log("snowflakesOff");
+        document.getElementById("snowflakes").style.visibility = "hidden";
+        document.getElementById("snowflakes").style.display = "none";
+        snowflakes = !snowflakes;
+      } else if (snowflakes != true) {
+        console.log("snowflakesOn");
         document.getElementById("snowflakes").style.visibility = "visible";
         document.getElementById("snowflakes").style.display = "block";
-  snowflakes = !snowflakes;
+        snowflakes = !snowflakes;
       }
-
     };
-
-
     var snowflakesMobilevar = false;
-      $.fn.SnowflakesMobile = function(){
-          if(snowflakesMobilevar == true){
-            document.getElementById("body").focus();
-            console.log("snowflakesOff");
-
-                document.getElementById("snowflakesmobile").style.visibility = "hidden";
-                document.getElementById("snowflakesmobile").style.display = "none";
-                snowflakesMobilevar = !snowflakesMobilevar;
-
-              }
-              else if(snowflakesMobilevar != true){
-                document.getElementById("body").focus();
-
-                console.log("snowflakesOn");
-                document.getElementById("snowflakesmobile").style.visibility = "visible";
-
-                document.getElementById("snowflakesmobile").style.display = "block";
-    snowflakesMobilevar = !snowflakesMobilevar;
-
-        }
-
-      };
-
+    $.fn.SnowflakesMobile = function() {
+      if (snowflakesMobilevar == true) {
+        document.getElementById("body").focus();
+        console.log("snowflakesOff");
+        document.getElementById("snowflakesmobile").style.visibility = "hidden";
+        document.getElementById("snowflakesmobile").style.display = "none";
+        snowflakesMobilevar = !snowflakesMobilevar;
+      } else if (snowflakesMobilevar != true) {
+        document.getElementById("body").focus();
+        console.log("snowflakesOn");
+        document.getElementById("snowflakesmobile").style.visibility = "visible";
+        document.getElementById("snowflakesmobile").style.display = "block";
+        snowflakesMobilevar = !snowflakesMobilevar;
+      }
+    };
     var DoUpdate;
     console.log("document loaded");
     $(window).resize(function() {
@@ -248,7 +204,7 @@
               })
             ],
             view: new ol.View({
-              center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
+              center: ol.proj.fromLonLat([-1.2401012, 52.9540019]),
               zoom: 17
             })
           });
@@ -267,7 +223,7 @@
               })
             ],
             view: new ol.View({
-              center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
+              center: ol.proj.fromLonLat([-1.2401012, 52.9540019]),
               zoom: 17
             })
           });
@@ -275,51 +231,41 @@
       }
     });
     $(document).ready(function() {
-
       var pos;
-        if (navigator.geolocation) {
-          pos = navigator.geolocation.getCurrentPosition(getloc);
+      if (navigator.geolocation) {
+        pos = navigator.geolocation.getCurrentPosition(getloc);
+      }
 
-        }
-        function getloc(position){
-
-          if ($(window).width() > 855) {
-            var map;
-            map = document.getElementById("map");
-            map.remove();
-
-
-            var newDiv = document.createElement('div');
-            newDiv.id = "map";
-            newDiv.className = 'map';
-            document.getElementById('maploc').appendChild(newDiv);
-            pos = [position.coords.latitude +','+ position.coords.longitude];
-            document.getElementById("mobile").style.visibility = "hidden";
-            document.getElementById("web").style.visibility = "visible";
-            document.getElementById("mobile").style.display = "none";
-            document.getElementById("web").style.display = "block";
-            var map = new ol.Map({
-              target: 'map',
-              layers: [
-                new ol.layer.Tile({
-                  source: new ol.source.OSM()
-                })
-              ],
-              view: new ol.View({
-                center: ol.proj.fromLonLat([position.coords.longitude , position.coords.latitude]),
-                zoom: 17
+      function getloc(position) {
+        if ($(window).width() > 855) {
+          var map;
+          map = document.getElementById("map");
+          map.remove();
+          var newDiv = document.createElement('div');
+          newDiv.id = "map";
+          newDiv.className = 'map';
+          document.getElementById('maploc').appendChild(newDiv);
+          pos = [position.coords.latitude + ',' + position.coords.longitude];
+          document.getElementById("mobile").style.visibility = "hidden";
+          document.getElementById("web").style.visibility = "visible";
+          document.getElementById("mobile").style.display = "none";
+          document.getElementById("web").style.display = "block";
+          var map = new ol.Map({
+            target: 'map',
+            layers: [
+              new ol.layer.Tile({
+                source: new ol.source.OSM()
               })
-            });
-
-          }
-
-
-        else if ($(window).width() < 855) {
+            ],
+            view: new ol.View({
+              center: ol.proj.fromLonLat([position.coords.longitude, position.coords.latitude]),
+              zoom: 17
+            })
+          });
+        } else if ($(window).width() < 855) {
           var mapm;
           mapm = document.getElementById("mapm");
           mapm.remove();
-
-
           var newDiv = document.createElement('div');
           newDiv.id = "mapm";
           newDiv.className = 'mapm';
@@ -336,35 +282,30 @@
               })
             ],
             view: new ol.View({
-              center: ol.proj.fromLonLat([position.coords.longitude , position.coords.latitude]),
+              center: ol.proj.fromLonLat([position.coords.longitude, position.coords.latitude]),
               zoom: 17
             })
           });
         }
-        }
-        if ($(window).width() > 855) {
-
-          document.getElementById("mobile").style.visibility = "hidden";
-          document.getElementById("web").style.visibility = "visible";
-          document.getElementById("mobile").style.display = "none";
-          document.getElementById("web").style.display = "block";
-          var map = new ol.Map({
-            target: 'map',
-            layers: [
-              new ol.layer.Tile({
-                source: new ol.source.OSM()
-              })
-            ],
-            view: new ol.View({
-              center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
-              zoom: 17
+      }
+      if ($(window).width() > 855) {
+        document.getElementById("mobile").style.visibility = "hidden";
+        document.getElementById("web").style.visibility = "visible";
+        document.getElementById("mobile").style.display = "none";
+        document.getElementById("web").style.display = "block";
+        var map = new ol.Map({
+          target: 'map',
+          layers: [
+            new ol.layer.Tile({
+              source: new ol.source.OSM()
             })
-          });
-
-        }
-
-
-      else if ($(window).width() < 855) {
+          ],
+          view: new ol.View({
+            center: ol.proj.fromLonLat([-1.2401012, 52.9540019]),
+            zoom: 17
+          })
+        });
+      } else if ($(window).width() < 855) {
         document.getElementById("mobile").style.visibility = "visible";
         document.getElementById("web").style.visibility = "hidden";
         document.getElementById("mobile").style.display = "block";
@@ -377,7 +318,7 @@
             })
           ],
           view: new ol.View({
-            center: ol.proj.fromLonLat([-1.2401012,52.9540019]),
+            center: ol.proj.fromLonLat([-1.2401012, 52.9540019]),
             zoom: 17
           })
         });
