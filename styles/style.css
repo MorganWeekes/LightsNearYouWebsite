@@ -55,7 +55,7 @@ color: #000;
 .red{
   display: inline-block;
   text-align: justify;
-  padding: 10px;
+  padding: 40px;
   background-color: transparent;
   background: transparent;
   font-weight: bold;
@@ -65,6 +65,27 @@ color: #000;
   background-color:transparent;
 
 }
+.phone {
+  transform:
+    rotateX(-57deg)
+    rotateZ(45deg);
+  transform-style: preserve-3d;
+  border-radius: 32px;
+  background-image: url("../images/phone.png");
+  border-color: dimgray;
+  border-style:solid;
+  width:350px;
+  height: 180px;
+  box-shadow:
+    1px 1px 0 1px #f9f9fb,
+    -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+  transition:
+    .4s ease-in-out transform,
+    .4s ease-in-out box-shadow;
+
+}
+
 
 .redm{
   display: inline-block;
@@ -381,7 +402,7 @@ top:0;
   align-items: center;
   text-align: center;
   width: inherit;
-  display: none;
+  padding: 50px !important;
 }
 .imglink{
   align-self: end;
