@@ -85,6 +85,28 @@ color: #000;
     .4s ease-in-out box-shadow;
 
 }
+.phone:hover{
+    transform:
+      rotateX(0deg)
+      rotateZ(90deg);
+    transform-style: preserve-3d;
+    border-radius: 32px;
+    background-image: url("../images/phone.png");
+    border-color: dimgray;
+    border-style:solid;
+    margin: 50px;
+    width:330px;
+    height: 170px;
+    box-shadow:
+      1px 1px 0 1px #f9f9fb,
+      -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+      28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+    transition:
+      .4s ease-in-out transform,
+      .4s ease-in-out box-shadow;
+
+
+}
 
 
 .redm{
