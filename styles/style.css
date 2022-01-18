@@ -66,6 +66,7 @@ color: #000;
 
 }
 .phone {
+  position: relative;
   transform:
     rotateX(-57deg)
     rotateZ(45deg);
@@ -76,16 +77,19 @@ color: #000;
   border-style:solid;
   width:350px;
   height: 180px;
+  top:20px;
   box-shadow:
     1px 1px 0 1px #f9f9fb,
     -1px 0 28px 0 rgba(34, 33, 81, 0.01),
     28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   transition:
     .4s ease-in-out transform,
-    .4s ease-in-out box-shadow;
-
+    .4s ease-in-out box-shadow,
+    .4s ease-in-out width,
+    .4s ease-in-out height,
+    .5s ease-in-out top;
 }
-.phone:hover{
+.phoneonhover:hover .phone{
     transform:
       rotateX(0deg)
       rotateZ(90deg);
@@ -94,20 +98,47 @@ color: #000;
     background-image: url("../images/phone.png");
     border-color: dimgray;
     border-style:solid;
-    margin: 50px;
-    width:330px;
-    height: 170px;
     box-shadow:
       1px 1px 0 1px #f9f9fb,
       -1px 0 28px 0 rgba(34, 33, 81, 0.01),
-      28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+      28px 0px 28px 0 rgba(34, 33, 81, 0.25);
+    width:330px;
+    height: 170px;
+    top:100px;
+
     transition:
       .4s ease-in-out transform,
-      .4s ease-in-out box-shadow;
+      .4s ease-in-out box-shadow,
+      .4s ease-in-out width,
+      .4s ease-in-out height,
+      .5s ease-in-out top;
+
+
 
 
 }
+.phoneonhover:hover{
+  -webkit-transition: height 1s ease-in-out;
+    -moz-transition: height 1s ease-in-out;
+    -o-transition: height 1s ease-in-out;
+    transition: height 0.5s ease-in-out;
 
+    height: 355px;
+
+
+}
+.phoneonhover{
+  width:80%;
+  height: 150pt;
+
+  transition:
+    .4s ease-in-out transform,
+    .4s ease-in-out box-shadow,
+    .4s ease-in-out height;
+
+
+
+}
 
 .redm{
   display: inline-block;

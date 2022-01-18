@@ -35,7 +35,7 @@
               </a>
             </li>
             <li>
-              <a class="dropdown" href="#">
+              <a class="dropdown" href="about.html">
                 <button class="buttonmenu">About</button>
 
               </a>
@@ -57,8 +57,11 @@
 
       <div class="Headeralign">
         <h1 class="red">Download</h1>
+        <a id="phonepc" href="">
+        <div class="phoneonhover">
           <div class="phone"></div>
-
+        </div>
+      </a>
     </div>
 
 
@@ -66,9 +69,9 @@
         <h1 style="color:white;">Get the app now on selected phone Stores</h1>
         <div style="padding:5px"></div>
         <div class="storeimages">
-          <img src="Images/Stores/playstore.png" alt="">
+          <img id="appstorepc" src="Images/Stores/playstore.png" alt="">
           <div style="padding:3%"></div>
-          <img src="Images/Stores/appstore.png" alt="">
+          <img id="appstorepc" src="Images/Stores/appstore.png" alt="">
         </div>
       </div>
       <div style="padding:5%"></div>
@@ -126,8 +129,11 @@
         </header>
         <div class="Headeralign">
           <h1 class="redm">Download</h1>
+          <a id="phone" href="">
+          <div class="phoneonhover">
             <div class="phone"></div>
-
+          </div>
+        </a>
       </div>
       <div class="store-icons">
         <h1 style="color:white;">Get the app now on selected phone Stores</h1>
@@ -229,7 +235,10 @@
 
       }
        else if ($(window).width() < 855) {
+         document.getElementsByClassName("phone")[0].style.backgroundImage = "url('images/andphone.png')" ;
+         document.getElementsByClassName("phone")[1].style.backgroundImage = "url('images/andphone.png')" ;
         document.getElementById("mobile").style.visibility = "visible";
+
         document.getElementById("web").style.visibility = "hidden";
         document.getElementById("mobile").style.display = "block";
         document.getElementById("web").style.display = "none";
@@ -238,44 +247,52 @@
       console.log(navigator.userAgent);
       if(navigator.userAgent.includes("Iphone")||navigator.userAgent.includes("iphone")||navigator.userAgent.includes("iPhone")||navigator.userAgent.includes("AppleWebKit")){
         document.getElementById("playstore").style.visibility = "hidden";
+        document.getElementById("phone").href = "#iphoneurl";
         document.getElementById("playstore").style.display = "none";
         console.log("iphone");
       }
       else if(navigator.userAgent.includes("Android")||navigator.userAgent.includes("android")){
         document.getElementById("appstore").style.visibility = "hidden";
+        document.getElementById("phone").href = "#androidurl";
         document.getElementById("appstore").style.display = "none";
+
         console.log("android");
       }
       else if(navigator.userAgent.includes("Windows")){
         document.getElementById("playstore").style.visibility = "hidden";
+        document.getElementById("phone").href = "#windowsurl";
         document.getElementById("playstore").style.display = "none";
         console.log("windows");
     }
     });
 
     $(document).ready(function() {
-      console.log(navigator.userAgent);
-      if(navigator.userAgent.includes("Iphone")){
-        document.getElementById("playstore").style.visibility = "hidden";
-        document.getElementById("playstore").style.display = "none";
-        console.log("iphone");
-      }
-      else if(navigator.userAgent.includes("Android")){
-        document.getElementById("appstore").style.visibility = "hidden";
-        document.getElementById("appstore").style.display = "none";
-        console.log("android");
-      }
-      else if(navigator.userAgent.includes("Windows")){
-        document.getElementById("playstore").style.visibility = "hidden";
-        document.getElementById("playstore").style.display = "none";
-        console.log("windows");
-    }
         if ($(window).width() > 855) {
 
           document.getElementById("mobile").style.visibility = "hidden";
           document.getElementById("web").style.visibility = "visible";
           document.getElementById("mobile").style.display = "none";
           document.getElementById("web").style.display = "block";
+
+          console.log(navigator.userAgent);
+          if(navigator.userAgent.includes("Iphone")||navigator.userAgent.includes("iphone")||navigator.userAgent.includes("iPhone")){
+            document.getElementById("playstorepc").style.visibility = "hidden";
+            document.getElementById("phonepc").href = "#iphoneurl";
+            document.getElementById("playstorepc").style.display = "none";
+            console.log("iphone");
+          }
+          else if(navigator.userAgent.includes("Android")||navigator.userAgent.includes("android")){
+            document.getElementById("appstorepc").style.visibility = "hidden";
+            document.getElementById("phonepc").href = "#androidurl";
+            document.getElementById("appstorepc").style.display = "none";
+        console.log("android");
+          }
+          else if(navigator.userAgent.includes("Windows")){
+            document.getElementById("playstorepc").style.visibility = "hidden";
+            document.getElementById("phonepc").href = "#windowsurl";
+            document.getElementById("playstorepc").style.display = "none";
+            console.log("windows");
+          }
         }
 
 
@@ -284,7 +301,27 @@
         document.getElementById("web").style.visibility = "hidden";
         document.getElementById("mobile").style.display = "block";
         document.getElementById("web").style.display = "none";
-
+        console.log(navigator.userAgent);
+        if(navigator.userAgent.includes("Iphone")||navigator.userAgent.includes("iphone")||navigator.userAgent.includes("iPhone")){
+          document.getElementById("playstore").style.visibility = "hidden";
+          document.getElementById("phone").href = "#iphoneurl";
+          document.getElementById("playstore").style.display = "none";
+          console.log("iphone");
+        }
+        else if(navigator.userAgent.includes("Android")||navigator.userAgent.includes("android")){
+          document.getElementById("appstore").style.visibility = "hidden";
+          document.getElementById("phone").href = "#androidurl";
+          document.getElementById("appstore").style.display = "none";
+          console.log("android");
+          document.getElementsByClassName("phone")[0].style.backgroundImage = "url('images/andphone.png')" ;
+          document.getElementsByClassName("phone")[1].style.backgroundImage = "url('images/andphone.png')" ;
+      }
+        else if(navigator.userAgent.includes("Windows")){
+          document.getElementById("playstore").style.visibility = "hidden";
+          document.getElementById("phone").href = "#windowsurl";
+          document.getElementById("playstore").style.display = "none";
+          console.log("windows");
+        }
       }
     });
   </script>
