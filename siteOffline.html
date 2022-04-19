@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lights Near You</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fonts/Candycane.ttf">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/css/ol.css" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/build/ol.js"></script>
+  </head>
+  <body id="body">
+    <div class="web" id="web">
+      <header class="headeroff">
+        <h1 class="logo" alt="logo"><button onclick="$().test('msg');" class="buttontoggleoff">❅</button>
+          Lights Near You</h1>
+      
+        
+        </header>
+        <div style="color:white; align-content: center; text-align: -webkit-center;">
+          <h1 class="red" >Lights Near You</h1>
+          <div class="offlinebackground"> 
+              <h2 >Lights Near You is currently down for maintenance please stand by uptimes usually consist from <p>1st of december to the 30th of december</p></h2>
+            </div>
+        </div>
+  
+      <div style="padding:5%"></div>
+      <div id="snowflakes" class="snowflakes" aria-hidden="true">
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflake"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+        <div class="snowflakes2"> ❅ </div>
+      </div>
+    </div>
+    <div class="mobile" id="mobile">
+      <div im>
+        <header class="headeroff">
+          <h1 class="logo" alt="logo">Lights Near You</h1>
+          </header> 
+       
+        <div style="padding:5%"></div>
+        <div id="snowflakesmobile" class="snowflakesm" aria-hidden="true">
+          <div class="snowflake"> ❅ </div>
+          <div class="snowflake"> ❅ </div>
+          <div class="snowflake"> ❅ </div>
+          <div class="snowflake"> ❅ </div>
+          <div class="snowflakes2"> ❅ </div>
+          <div class="snowflakes2"> ❅ </div>
+          <div class="snowflakes2"> ❅ </div>
+          <div class="snowflakes2"> ❅ </div>
+          <div class="snowflakes2"> ❅ </div>
+          <div class="snowflakes2"> ❅ </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
+    <div class="icons">
+      <a href="#">
+        <img src="images/FacebookIcos/Color/PNG/f_logo_RGB-Blue_100.png" class="footerimgdiv">
+      </a>
+      <a href="#">
+        <img src="images/InstagramIcos/Instagram_Glyph_Gradient_RGB_Inverted.png" class="footerimgdiv">
+      </a>
+      <a href="#">
+        <img src="images/Twitter social icons/TwitterIcosRound/Twitter social icons - circle - blue.png" class="footerimgdiv">
+      </a>
+      <div>
+        <h3>Lights near you ©</h3>
+      </div>
+    </div>
+    <!-- Rectangular switch -->
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript"></script>
+  <script>
+    jQuery(function($) {
+      $('.dropdownm').click(function() {
+        $('.responsive-menu').toggleClass('expand')
+      })
+    })
+    var snowflakes = true;
+    $.fn.test = function() {
+      if (snowflakes == true) {
+        console.log("snowflakesOff");
+        document.getElementById("snowflakes").style.visibility = "hidden";
+        document.getElementById("snowflakes").style.display = "none";
+        snowflakes = !snowflakes;
+      } else if (snowflakes != true) {
+        console.log("snowflakesOn");
+        document.getElementById("snowflakes").style.visibility = "visible";
+        document.getElementById("snowflakes").style.display = "block";
+        snowflakes = !snowflakes;
+      }
+    };
+    var snowflakesMobilevar = false;
+    $.fn.SnowflakesMobile = function() {
+      if (snowflakesMobilevar == true) {
+        document.getElementById("body").focus();
+        console.log("snowflakesOff");
+        document.getElementById("snowflakesmobile").style.visibility = "hidden";
+        document.getElementById("snowflakesmobile").style.display = "none";
+        snowflakesMobilevar = !snowflakesMobilevar;
+      } else if (snowflakesMobilevar != true) {
+        document.getElementById("body").focus();
+        console.log("snowflakesOn");
+        document.getElementById("snowflakesmobile").style.visibility = "visible";
+        document.getElementById("snowflakesmobile").style.display = "block";
+        snowflakesMobilevar = !snowflakesMobilevar;
+      }
+    };
+    var DoUpdate;
+    console.log("document loaded");
+    $(window).resize(function() {
+      if ($(window).width() > 855) {
+        document.getElementById("mobile").style.visibility = "hidden";
+        document.getElementById("web").style.visibility = "visible";
+        document.getElementById("mobile").style.display = "none";
+        document.getElementById("web").style.display = "block";
+        
+      } else if ($(window).width() < 855) {
+        document.getElementById("mobile").style.visibility = "visible";
+        document.getElementById("web").style.visibility = "hidden";
+        document.getElementById("mobile").style.display = "block";
+        document.getElementById("web").style.display = "none";
+        
+      }
+    });
+    $(document).ready(function() {
+      
+
+      function getloc(position) {
+        if ($(window).width() > 855) {
+          
+          document.getElementById("mobile").style.visibility = "hidden";
+          document.getElementById("web").style.visibility = "visible";
+          document.getElementById("mobile").style.display = "none";
+          document.getElementById("web").style.display = "block";
+          
+        } else if ($(window).width() < 855) {
+         
+          document.getElementById("mobile").style.visibility = "visible";
+          document.getElementById("web").style.visibility = "hidden";
+          document.getElementById("mobile").style.display = "block";
+          document.getElementById("web").style.display = "none";
+          
+        }
+      }
+      if ($(window).width() > 855) {
+        document.getElementById("mobile").style.visibility = "hidden";
+        document.getElementById("web").style.visibility = "visible";
+        document.getElementById("mobile").style.display = "none";
+        document.getElementById("web").style.display = "block";
+        
+      } else if ($(window).width() < 855) {
+        document.getElementById("mobile").style.visibility = "visible";
+        document.getElementById("web").style.visibility = "hidden";
+        document.getElementById("mobile").style.display = "block";
+        document.getElementById("web").style.display = "none";
+        
+      }
+    });
+  </script>
+</html>

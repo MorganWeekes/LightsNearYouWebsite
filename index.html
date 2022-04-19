@@ -1,15 +1,25 @@
 <script type="text/javascript">
-  
-
-    alert(loadFile("Conf/SiteConf.con"));
     function loadFile(filePath) {
-  var result = null;
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", filePath, false);
-  xmlhttp.send();
-  if (xmlhttp.status==200) {
-    result = xmlhttp.responseText;
-  }
-  return result;
+        var resultbefor;
+        var result = null;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", filePath, false);
+    xmlhttp.send();
+    if (xmlhttp.status==200) {
+        resultbefor = xmlhttp.responseText.split(":");
+        result = resultbefor.toString().split(";");
+    }
+    return result;
+
 }
+
+    conf = loadFile("Conf/SiteConf.con");
+    if(conf[2].toString().replace('\n',"").split(",")[1].toString().includes("true"))
+    {
+        window.location.href = "siteOffline.html";
+    }
+    else{
+        window.location.href = "index1.html";
+    }
+    
     </script>
