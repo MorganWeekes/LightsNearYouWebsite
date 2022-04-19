@@ -6,7 +6,12 @@
   padding: 0px;
 
 }
+@font-face {
+  font-family: candycane;
+  src: url(../fonts/Candcu__.ttf);
 
+  
+} 
 body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 120%);
   height: 100%;
@@ -60,7 +65,7 @@ color: #000;
   background: transparent;
   font-weight: bold;
   font-size: 70px;
-
+  font-family: candycane;;
   color:white;
   background-color:transparent;
 
@@ -204,7 +209,7 @@ h1{
   border:inset;
   border-width: 10px;
   border-style: block;
-  border-color: #grey;
+  border-color: grey;
 
 }
 .mapm{
@@ -216,11 +221,11 @@ h1{
   border:inset;
   border-width: 10px;
   border-style: block;
-  border-color: #grey;
+  border-color: grey;
 
 }
 .mapalign{
-padding-top: 5%;
+padding-top: 2%;
   text-align: -webkit-center;
 }
 .Headeralign{
@@ -255,26 +260,36 @@ top:0;
   rgba(255, 255, 255, 0.7),
   rgba(255, 255, 255, 0.7) 10px,
   rgba(200, 100, 100, 1) 10px,
-  rgba(200, 100, 100, 1) 20px
+  rgba(245, 141, 141, 0.555) 20px
 );
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
+  padding: 20px 2%;
   font-weight: bold;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
+
+    
 .logo{
-  margin-right: auto;
+  font-family: "candycane";
+  color: rgb(36, 24, 24);
   cursor: pointer;
-  width:200px;
+  width:350px;
+  font-size: 40px;
+  text-align: center;
+  align-content: center;
+
 }
 .logom{
   margin-right: auto;
+  text-align: center;
+  font-family: "candycane";
+  color: rgb(138, 66, 66);
   cursor: pointer;
-  width:150px;
+  width:300px;
 }
 .menum{
   width: 40px;
@@ -436,10 +451,7 @@ top:0;
 
   text-align: center;
   align-items: center;
-  position: fixed;
 
-  left: 0%;
-  top:0%;
   text-align: center;
   z-index: 200;
   opacity: 20%;

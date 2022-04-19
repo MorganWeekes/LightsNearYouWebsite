@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html style="height:100%"lang="en" dir="ltr">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lights Near You</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fonts/Candycane.ttf">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js"></script>
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/css/ol.css" type="text/css" />
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/build/ol.js"></script>
   </head>
-
   <body id="body">
-
     <div class="web" id="web">
       <header>
-
-        <a  class="logo" href="index.html">
-          <h1 class="logo" alt="logo"><button onclick="$().test('msg');" class="buttontoggleoff">❅</button>
-            Lights Near You</h1>
-        
-        </a>
+        <h1 class="logo" alt="logo"><button onclick="$().test('msg');" class="buttontoggleoff">❅</button>
+          Lights Near You</h1>
+      
         <nav>
           <ul class="nav__links">
             <li>
@@ -33,39 +29,25 @@
             <li>
               <a class="dropdown" href="download.html">
                 <button class="buttonmenu">Download</button>
-
               </a>
             </li>
             <li>
-              <a class="dropdown" href="#">
+              <a class="dropdown" href="about.html">
                 <button class="buttonmenu">About</button>
-
               </a>
             </li>
             <li>
               <a class="dropdown" href="#">
                 <button class="buttonmenu">Contact</button>
-
               </a>
             </li>
           </ul>
-
         </nav>
-
-      </header>
-
-      <div class="Headeralign">
-        <div class="ltext">
-        <h1 class="red">About Us</h1>
-      </div>
-      <div class="textborder">
-        <p class="AboutText">Lights Near you © is a start up family run business made to help local families enjoy the christmas celebration and look at the decorations and lights near and closest to them</p>
-
-      </div>
-
-
-    </div>
-
+        </header>
+        <div style="align-content: center; text-align: center;">
+          <h1 class="red" >Lights Near You</h1>
+        </div>
+  
       <div style="padding:5%"></div>
       <div id="snowflakes" class="snowflakes" aria-hidden="true">
         <div class="snowflake"> ❅ </div>
@@ -93,17 +75,15 @@
     <div class="mobile" id="mobile">
       <div im>
         <header>
-          <a  class="logom" href="index.html">
-          <img class="logom" src="images/logo.png" alt="logo">
-          </a>
+          <h1 class="logom" alt="logo">Lights Near You</h1>
           <div class="dropdownm">
             <img src="images/menum.png" class="menum">
             <div class="responsive-menu">
               <div class="buttonholderm">
                 <a href="" class="buttonmenum">Services</a>
               </div>
-              <div class="buttonholderm" href="download.html">
-                <a class="buttonmenum">Download</a>
+              <div class="buttonholderm">
+                <a class="buttonmenum" href="download.html">Download</a>
               </div>
               <div class="buttonholderm">
                 <a class="buttonmenum" href="about.html">About</a>
@@ -112,30 +92,18 @@
                 <a class="buttonmenum">Contact</a>
               </div>
               <div class="buttonholderm">
-                <a href="javascript:$().SnowflakesMobile('msg');" class="buttonmenum" >❅</a >
+                <a href="javascript:$().SnowflakesMobile('msg');" class="buttonmenum">❅</a>
               </div>
-            </a>
-          </div>
-
-
+              </a>
+            </div>
         </header>
-        <div class="Headeralign">
-          <div class="ltext">
-          <h1 class="red">About Us</h1>
-        </div>
-        <div class="textborder">
-          <p class="AboutTextm">Lights Near you © is a start up family run business made to help local families enjoy the christmas celebration and look at the decorations and lights near and closest to them</p>
-          <a class="imglink"  href=""></a>
-
-        </div>
-      </div>
+       
         <div style="padding:5%"></div>
         <div id="snowflakesmobile" class="snowflakesm" aria-hidden="true">
           <div class="snowflake"> ❅ </div>
           <div class="snowflake"> ❅ </div>
           <div class="snowflake"> ❅ </div>
           <div class="snowflake"> ❅ </div>
-
           <div class="snowflakes2"> ❅ </div>
           <div class="snowflakes2"> ❅ </div>
           <div class="snowflakes2"> ❅ </div>
@@ -162,87 +130,94 @@
       </div>
     </div>
     <!-- Rectangular switch -->
-
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-
-</script>
-
-
+  <script type="text/javascript"></script>
   <script>
-  var snowflakes = true;
-  jQuery(function($){
-   $( '.dropdownm' ).click(function(){
-   $('.responsive-menu').toggleClass('expand')
-   })
-})
-    $.fn.test = function(){
-        if(snowflakes == true){
-          console.log("snowflakesOff");
-              document.getElementById("snowflakes").style.visibility = "hidden";
-              document.getElementById("snowflakes").style.display = "none";
-              snowflakes = !snowflakes;
-            }
-            else if(snowflakes != true){
-              console.log("snowflakesOn");
+    jQuery(function($) {
+      $('.dropdownm').click(function() {
+        $('.responsive-menu').toggleClass('expand')
+      })
+    })
+    var snowflakes = true;
+    $.fn.test = function() {
+      if (snowflakes == true) {
+        console.log("snowflakesOff");
+        document.getElementById("snowflakes").style.visibility = "hidden";
+        document.getElementById("snowflakes").style.display = "none";
+        snowflakes = !snowflakes;
+      } else if (snowflakes != true) {
+        console.log("snowflakesOn");
         document.getElementById("snowflakes").style.visibility = "visible";
         document.getElementById("snowflakes").style.display = "block";
-  snowflakes = !snowflakes;
+        snowflakes = !snowflakes;
       }
-
     };
     var snowflakesMobilevar = false;
-      $.fn.SnowflakesMobile = function(){
-          if(snowflakesMobilevar == true){
-            console.log("snowflakesOff");
-                document.getElementById("snowflakesmobile").style.visibility = "hidden";
-                document.getElementById("snowflakesmobile").style.display = "none";
-                snowflakesMobilevar = !snowflakesMobilevar;
-              }
-              else if(snowflakesMobilevar != true){
-                console.log("snowflakesOn");
-          document.getElementById("snowflakesmobile").style.visibility = "visible";
-          document.getElementById("snowflakesmobile").style.display = "block";
-    snowflakesMobilevar = !snowflakesMobilevar;
-        }
-
-      };
-
+    $.fn.SnowflakesMobile = function() {
+      if (snowflakesMobilevar == true) {
+        document.getElementById("body").focus();
+        console.log("snowflakesOff");
+        document.getElementById("snowflakesmobile").style.visibility = "hidden";
+        document.getElementById("snowflakesmobile").style.display = "none";
+        snowflakesMobilevar = !snowflakesMobilevar;
+      } else if (snowflakesMobilevar != true) {
+        document.getElementById("body").focus();
+        console.log("snowflakesOn");
+        document.getElementById("snowflakesmobile").style.visibility = "visible";
+        document.getElementById("snowflakesmobile").style.display = "block";
+        snowflakesMobilevar = !snowflakesMobilevar;
+      }
+    };
+    var DoUpdate;
+    console.log("document loaded");
     $(window).resize(function() {
       if ($(window).width() > 855) {
         document.getElementById("mobile").style.visibility = "hidden";
         document.getElementById("web").style.visibility = "visible";
         document.getElementById("mobile").style.display = "none";
         document.getElementById("web").style.display = "block";
-
-      }
-       else if ($(window).width() < 855) {
+        
+      } else if ($(window).width() < 855) {
         document.getElementById("mobile").style.visibility = "visible";
         document.getElementById("web").style.visibility = "hidden";
         document.getElementById("mobile").style.display = "block";
         document.getElementById("web").style.display = "none";
-
+        
       }
     });
-
     $(document).ready(function() {
+      
 
+      function getloc(position) {
         if ($(window).width() > 855) {
-
+          
           document.getElementById("mobile").style.visibility = "hidden";
           document.getElementById("web").style.visibility = "visible";
           document.getElementById("mobile").style.display = "none";
           document.getElementById("web").style.display = "block";
+          
+        } else if ($(window).width() < 855) {
+         
+          document.getElementById("mobile").style.visibility = "visible";
+          document.getElementById("web").style.visibility = "hidden";
+          document.getElementById("mobile").style.display = "block";
+          document.getElementById("web").style.display = "none";
+          
         }
-
-
-      else if ($(window).width() < 855) {
+      }
+      if ($(window).width() > 855) {
+        document.getElementById("mobile").style.visibility = "hidden";
+        document.getElementById("web").style.visibility = "visible";
+        document.getElementById("mobile").style.display = "none";
+        document.getElementById("web").style.display = "block";
+        
+      } else if ($(window).width() < 855) {
         document.getElementById("mobile").style.visibility = "visible";
         document.getElementById("web").style.visibility = "hidden";
         document.getElementById("mobile").style.display = "block";
         document.getElementById("web").style.display = "none";
-
+        
       }
     });
   </script>
