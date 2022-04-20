@@ -13,6 +13,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/css/ol.css" type="text/css" />
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.10.0/build/ol.js"></script>
   </head>
+  <script type="text/javascript">
+    function loadFile(filePath) {
+        var resultbefor;
+        var result = null;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", filePath, false);
+    xmlhttp.send();
+    if (xmlhttp.status==200) {
+        resultbefor = xmlhttp.responseText.split(":");
+        result = resultbefor.toString().split(";");
+    }
+    return result;
+
+}
+
+    conf = loadFile("Conf/SiteConf.con");
+    if(!conf[2].toString().replace('\n',"").split(",")[1].toString().includes("true"))
+    {
+        window.location.href = "index1.html";
+    }
+    else{
+      setTimeout(() => { window.location.href = "";}, 10000);
+    }
+    
+    </script>
   <body id="body">
     <div class="web" id="web">
       <header class="headeroff">
