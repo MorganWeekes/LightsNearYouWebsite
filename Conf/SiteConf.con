@@ -1,6 +1,6 @@
 appstoreLinkAvailable : false ;
 PlaystoreLinkAvailable : false ;
-SiteOffline : true;
+SiteOffline : false;
 AboutOnline : false ;
 DownloadOnline : false ;
 MapPreview : true ;
