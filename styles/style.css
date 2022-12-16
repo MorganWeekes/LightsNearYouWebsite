@@ -266,7 +266,7 @@ position: sticky;
 top:0;
   z-index: 4;
   background: repeating-linear-gradient(
-  -45deg,
+  45deg,
   rgba(255, 255, 255, 0.25),
   rgba(255, 255, 255, 0.25) 10px,
   rgba(200, 100, 100, 0.25) 10px,
